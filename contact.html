@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Form</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <form class="midd" id="contactForm">
+
+            <div class="flex-container">
+                <div class="flex-item">
+                    <label for="firstname" id="first">First Name:</label>
+                    <input type="text" name="firstname" id="second">
+                    <div id="firstnameError" class="error"></div>
+                </div>
+                <div class="flex-item">
+                    <label for="lastname" id="third">Last Name:</label>
+                    <input type="text" name="lastname" id="fourth">
+                    <div id="lastnameError" class="error"></div>
+                </div>
+            </div>
+
+            <label for="email" id="fifth">Email:</label>
+            <input type="email" name="email" id="sixth">
+            <div id="emailError" class="error"></div>
+
+            <label for="queryType" id="seven">Query Type:</label>
+            <div class="radio-group">
+                <input type="radio" name="queryType" value="General enquiry" id="eight">
+                <label for="eight" id="nine">General enquiry</label>
+                <input type="radio" name="queryType" value="Support request" id="ten">
+                <label for="ten" id="ele">Support request</label>
+            </div>
+            <div id="queryTypeError" class="error"></div>
+
+            <label for="message" id="twelve">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <div id="messageError" class="error"></div>
+
+            <input type="checkbox" id="college" name="consent" value="i">
+            <label for="college" id="ghg">I consent to being contacted by the team</label>
+            <div id="consentError" class="error"></div>
+
+            <button type="submit" id="submit">Submit</button>
+
+        </form>
+
+    </div>
+
+    <script src="contact.js"></script>
+    
+</body>
+</html>
