@@ -20,10 +20,7 @@ label {
     font-weight: bold;
 }
 
-input[type="text"]
-{
-    margin:1px;
-}
+input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
@@ -31,7 +28,6 @@ textarea {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-
 }
 
 input[type="radio"] {
@@ -62,18 +58,44 @@ button[type="submit"]:hover {
 .flex-container {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
 }
 
 .flex-container .flex-item {
     flex: 1;
+    min-width: 0; /* Ensures items can shrink below their content size */
 }
 
 .radio-group {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
 }
 
 .radio-group label {
     margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column; 
+    }
+
+    .radio-group {
+        flex-direction: column; /* Stack radio buttons vertically on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        margin: 20px; /* Reduce margin on smaller screens */
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    button[type="submit"] {
+        width: 100%; /* Make the button full width on small screens */
+        padding: 15px; /* Increase padding for better touch target */
+    }
 }
